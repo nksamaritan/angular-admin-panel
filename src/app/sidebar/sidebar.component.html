@@ -1,0 +1,141 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul class="nav metismenu" id="side-menu">
+      <a routerLink="dashboard">
+        <li class="nav-header brand_logo">
+          <div class="dropdown profile-element">
+                        <span>
+                            <img alt="image"
+                                 src="http://leadapp.mobiosolutions.com/asset/admin/images/name-and-LOGO.png"
+                                 style="width:120px;height:120px;" class="lead_logo"/>
+                         </span>
+          </div>
+          <div class="logo-element">
+            <img alt="image"
+                 src="http://leadapp.mobiosolutions.com/asset/admin/images/leadtrackly_logo_transp_bg_512.png"
+                 style="height:50px; width: 50px; " class="sub_lead_logo"/>
+          </div>
+        </li>
+      </a>
+
+      <li class=" main_menu" [routerLinkActive]="['active']">
+        <a routerLink="dashboard"><i class="fa fa-dashboard"
+                                     style="margin-right: 10px;"></i> <span
+          class="nav-label">Dashboard</span></a>
+      </li>
+      <li class=" main_menu" [routerLinkActive]="['active']">
+        <a href="http://leadapp.mobiosolutions.com/admin/lead/list"><i class="fa fa-credit-card"
+                                                                       style="margin-right: 10px;"></i> <span
+          class="nav-label">Lead Management</span></a>
+      </li>
+      <li class=" main_menu" [routerLinkActive]="['active']">
+        <a href="http://leadapp.mobiosolutions.com/admin/user/list"><i class="fa fa-user"
+                                                                       style="margin-right: 14px;"></i> <span
+          class="nav-label">User Management</span></a>
+      </li>
+
+      <li class=" main_menu  custom_sales_icon" [routerLinkActive]="['active']">
+        <a href="http://leadapp.mobiosolutions.com/admin/customer/list"><img
+          src="http://leadapp.mobiosolutions.com/asset/admin/images/customer.png" style="margin-right: 10px;"/> <span
+          class="nav-label">Customer Management</span></a>
+      </li>
+
+      <li class=" main_menu custom_sales_icon" [routerLinkActive]="['active']">
+        <a href="#"><img src="http://leadapp.mobiosolutions.com/asset/admin/images/location.png"
+                         style="margin-right: 13px;"/><span class="dropdown-menu-right">Location Management</span><span
+          class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse sub_menu" style="padding-left: 25px;">
+          <li class=" custom_sales_icon" [routerLinkActive]="['active']">
+            <a href="http://leadapp.mobiosolutions.com/admin/location/country/list"><img
+              src="http://leadapp.mobiosolutions.com/asset/admin/images/country.png" style="margin-right: 14px;"/><span
+              class="nav-label ">Manage Country</span></a>
+          </li>
+          <li class="" [routerLinkActive]="['active']">
+            <a href="http://leadapp.mobiosolutions.com/admin/location/state/list"><i class="fa fa-university"
+                                                                                     style="margin-right: 14px;"></i><span
+              class="nav-label ">Manage State</span></a>
+          </li>
+          <li class=" custom_sales_icon" [routerLinkActive]="['active']">
+            <a href="http://leadapp.mobiosolutions.com/admin/location/city/list"><img
+              src="http://leadapp.mobiosolutions.com/asset/admin/images/city.png" style="margin-right: 14px;"/><span
+              class="nav-label ">Manage City</span></a>
+          </li>
+        </ul>
+      </li>
+      <li class=" main_menu custom_sales_icon" [routerLinkActive]="['active']">
+        <a href="#"><img src="http://leadapp.mobiosolutions.com/asset/admin/images/master_management_new.png"
+                         style="margin-right: 14px;"/><span class="dropdown-menu-right">Master Management</span><span
+          class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse sub_menu" style="padding-left: 25px;">
+
+          <li class=" custom_sales_icon" [routerLinkActive]="['active']">
+            <a href="http://leadapp.mobiosolutions.com/admin/status/list"><img
+              src="http://leadapp.mobiosolutions.com/asset/admin/images/lead_status.png"
+              style="margin-right: 14px;"/><span class="nav-label ">Lead Status</span></a>
+          </li>
+          <li class=" custom_sales_icon" [routerLinkActive]="['active']">
+            <a href="http://leadapp.mobiosolutions.com/admin/source/list"><img
+              src="http://leadapp.mobiosolutions.com/asset/admin/images/source.png" style="margin-right: 14px;"/><span
+              class="nav-label ">Source</span></a>
+          </li>
+        </ul>
+      </li>
+      <li class=" main_menu custom_sales_icon" [routerLinkActive]="['active']">
+        <a href="#"><img src="http://leadapp.mobiosolutions.com/asset/admin/images/machine-management.png"
+                         style="margin-right: 14px;"/><span class="dropdown-menu-right">Product Management</span><span
+          class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse sub_menu" style="padding-left: 25px;">
+
+
+          <li class=" custom_sales_icon" [routerLinkActive]="['active']">
+            <a href="http://leadapp.mobiosolutions.com/admin/machine_category/list"><img
+              src="http://leadapp.mobiosolutions.com/asset/admin/images/category.png" style="margin-right: 14px;"/><span
+              class="nav-label ">Product Category</span></a>
+          </li>
+
+          <li class=" custom_sales_icon" [routerLinkActive]="['active']">
+            <a href="http://leadapp.mobiosolutions.com/admin/machine_make/list"><img
+              src="http://leadapp.mobiosolutions.com/asset/admin/images/machine-maker.png" style="margin-right: 14px;"/><span
+              class="nav-label ">Product</span></a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class=" main_menu custom_sales_icon" [routerLinkActive]="['active']">
+        <a href="http://leadapp.mobiosolutions.com/admin/lead/report"><img
+          src="http://leadapp.mobiosolutions.com/asset/admin/images/sales.png" style="margin-right: 14px;"/> <span
+          class="nav-label">Report</span></a>
+      </li>
+
+      <li class=" main_menu" [routerLinkActive]="['active']">
+        <a href="#"><i class="fa fa-envelope-o" style="margin-right: 20px;"></i><span class="dropdown-menu-right">Email Management</span><span
+          class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse sub_menu" style="padding-left: 25px;">
+          <li class="">
+            <a href="http://leadapp.mobiosolutions.com/admin/email_template/list"><img
+              src="http://leadapp.mobiosolutions.com/asset/admin/images/email_template.png"
+              style="margin-right: 14px;"/><span class="nav-label">Email Template</span></a>
+          </li>
+          <li class="">
+            <a href="http://leadapp.mobiosolutions.com/admin/email_template/send_email_form"><img
+              src="http://leadapp.mobiosolutions.com/asset/admin/images/send_email.png"
+              style="margin-right: 14px;"/><span class="nav-label">Send Email</span></a>
+          </li>
+
+        </ul>
+      </li>
+      <li class=" main_menu custom_sales_icon" [routerLinkActive]="['active']">
+        <a routerLink="profile"><img
+          src="http://leadapp.mobiosolutions.com/asset/admin/images/user_profile.png" style="margin-right: 14px;"/>
+          <span class="nav-label">User Profile</span></a>
+      </li>
+
+      <li class=" main_menu custom_sales_icon" [routerLinkActive]="['active']">
+        <a routerLink="change-password"><img
+          src="http://leadapp.mobiosolutions.com/asset/admin/images/change_password.png"
+          style="margin-right: 14px;"/><span class="nav-label">Change Password</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>

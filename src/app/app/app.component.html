@@ -1,0 +1,8 @@
+<app-sidebar *ngIf="checkAuthentication()"></app-sidebar>
+<div id="page-wrapper" class="gray-bg" *ngIf="checkAuthentication()">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
+
+<router-outlet *ngIf="!checkAuthentication()"></router-outlet>

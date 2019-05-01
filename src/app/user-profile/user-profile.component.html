@@ -1,0 +1,86 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Edit User</h5>
+        </div>
+        <div class="ibox-content">
+          <form method="post" class="form-horizontal" id="edituser_form"
+                (ngSubmit)="userDetailForUpdate.valid && updateUser()" #userDetailForUpdate="ngForm"
+                novalidate>
+            <div class="form-group"><label class="col-md-2 col-sm-12 control-label">First Name</label>
+              <div class="col-md-6 col-sm-12">
+                <input type="text" name="firstName" id="firstName" placeholder="First Name"
+                       [(ngModel)]="userDetails.firstName"
+                       #firstName="ngModel"
+                       required="required"
+                       class="form-control required" value="{{userDetails.firstName}}" firstName/>
+                <div *ngIf="userDetailForUpdate.submitted && firstName.invalid" class="invalid-feedback danger">
+                  <div *ngIf="firstName.errors.required">First Name is required</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group"><label class="col-md-2 col-sm-12 control-label">Last Name</label>
+              <div class="col-md-6 col-sm-12">
+                <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="form-control required"
+                       [(ngModel)]="userDetails.lastName"
+                       #lastName="ngModel"
+                       required="required"
+                       value="{{userDetails.lastName}}" lastName/>
+                <div *ngIf="userDetailForUpdate.submitted && lastName.invalid" class="invalid-feedback danger">
+                  <div *ngIf="lastName.errors.required">Last Name is required</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group"><label class="col-md-2 col-sm-12 control-label">Username</label>
+              <div class="col-md-6 col-sm-12">
+                <input type="text" name="userName" id="userName" placeholder="Username" class="form-control required"
+                       value="{{userDetails.username}}" readonly=""/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-2 col-sm-12 control-label">Email</label>
+              <div class="col-md-6 col-sm-12">
+                <input type="text" name="email" id="email" placeholder="Email" class="form-control required email"
+                       value="{{userDetails.email}}" readonly=""/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-2 col-sm-12 control-label">Mobile No</label>
+              <div class="col-md-6 col-sm-12">
+                <input type="text" placeholder="Mobile No" class="form-control required" maxlength="10"
+                       [(ngModel)]="userDetails.mobile_no"
+                       #mobile_no="ngModel"
+                       required="required"
+                       minlength="10"
+                       autocomplete="off" name="mobile_no" id="mobile_no" value="{{userDetails.mobile_no}}" mobile_no>
+                <div *ngIf="userDetailForUpdate.submitted && mobile_no.invalid" class="invalid-feedback danger">
+                  <div *ngIf="mobile_no.errors.required">Mobile Number is required</div>
+                  <div *ngIf="mobile_no.errors.minlength">Mobile Number must have 10 digits</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-2 col-sm-12 control-label">User Type</label>
+              <div class="col-md-6 col-sm-12">
+                <label class="col-md-6 col-sm-12 control-label"
+                       style="text-align: left;">{{userDetails.userType}}</label>
+              </div>
+            </div>
+            <input type="hidden" class="form-control required"
+                   [(ngModel)]="userDetails.user_id"
+                   autocomplete="off" name="user_id" id="user_id" value="{{userDetails.user_id}}">
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+              <div class="col-md-4 col-sm-12 col-sm-offset-2">
+                <button class="btn btn-primary" type="submit">Update</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

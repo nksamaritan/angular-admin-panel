@@ -1,0 +1,63 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+
+  <div class="row">
+    <div class="col-md-3 col-sm-6">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content content_count" style="background-color: #418BCA; ">
+          <div class="pull-left dashboard_image_div">
+            <img class="dashboard_image" src="http://localhost:4200/assets/images/today_dashboard.png" alt="Open Lead"/>
+          </div>
+          <div class="dashboard_text">
+            Follow Up by Today
+            <h1 class="dashboard_count">{{dashboardDetails.todayFollowUps}}</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content content_count" style="background-color: #D9544F; ">
+          <div class="pull-left dashboard_image_div">
+            <img class="dashboard_image" src="http://localhost:4200/assets/images/seven_dashboard.png" alt="Open Lead"/>
+          </div>
+          <div class="dashboard_text">
+            Upcoming Follow Up
+            <h1 class="dashboard_count">{{dashboardDetails.upcomingFollowUps}}</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content content_count" style="background-color: #1CB09A; ">
+          <div class="pull-left dashboard_image_div">
+            <img class="dashboard_image" src="http://localhost:4200/assets/images/overdue_dashboard.png"
+                 alt="Open Lead"/>
+          </div>
+          <div class="dashboard_text">
+            Overdue Follow Ups
+            <h1 class="dashboard_count">{{dashboardDetails.overdueFollowUps}}</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content content_count" style="background-color: #A512AA; ">
+          <div class="pull-left dashboard_image_div">
+            <img class="dashboard_image" src="http://localhost:4200/assets/images/success_dashboard.png"
+                 alt="Open Lead"/>
+          </div>
+          <div class="dashboard_text">
+            Lead Converted
+            <h1 class="dashboard_count">{{dashboardDetails.LeadConverted}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

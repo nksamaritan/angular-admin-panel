@@ -1,0 +1,58 @@
+<div class="middle-box text-center loginscreen loginscreen_content  animated fadeInDown">
+  <div class="col-md-2 col-sm-2"></div>
+  <div class="col-md-8 col-sm-8 login_main">
+    <div class="col-md-6 col-sm-6 pull-left login_main_logo">
+      <div class="image">
+        <img class="login_image" src="http://localhost:4200/assets/images/name-and-LOGO.png"
+             style="width:120px;height:120px;"/>
+      </div>
+      <p class="tag_line">Welcome to <br/> Lead Trackly System</p>
+    </div>
+    <div class="col-md-6 col-sm-6 pull-right login_main_form">
+      <form class="m-t" role="form" name="loginForm" #loginForm="ngForm"
+            (ngSubmit)="loginForm.form.valid && loginUser(loginForm)" novalidate>
+        <div class="login_main_input">
+          <div class="login_main_input_1">
+                        <span>
+                            <img src="http://localhost:4200/assets/images/login_user.png" class="img_user"/>
+                        </span>
+            <input type="text"
+                   name="username"
+                   id="username"
+                   class="form-control"
+                   placeholder="Username"
+                   [(ngModel)]="user.username"
+                   #username="ngModel"
+                   required="required"
+                   username>
+            <div *ngIf="loginForm.submitted && username.invalid" class="invalid-feedback danger">
+              <div *ngIf="username.errors.required">Email is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="login_main_input">
+          <div class="login_main_input_1">
+                        <span>
+                            <img src="http://localhost:4200/assets/images/login_2.png"/>
+                        </span>
+            <input type="password"
+                   name="password"
+                   id="password"
+                   class="form-control"
+                   placeholder="Password"
+                   [(ngModel)]="user.password"
+                   #password="ngModel"
+                   required="required"
+                   maxlength="10" minlength="5">
+            <div *ngIf="loginForm.submitted && password.invalid" class="invalid-feedback danger">
+              <div *ngIf="password.errors.required">Password is required</div>
+              <div *ngIf="password.errors.minlength">Password should not be lesser than 5</div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" style="clear:both;" class="btn btn-primary block full-width m-b">Login<img
+          src="http://localhost:4200/assets/images/arrow_left.png" class="login_arrow"/></button>
+      </form>
+    </div>
+  </div>
+</div>
