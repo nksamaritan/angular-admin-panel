@@ -7,6 +7,16 @@
           <h5>Edit User</h5>
         </div>
         <div class="ibox-content">
+          <div class="alert alert-danger" *ngFor="let error of errors">
+            <ul>
+              <li>{{error}}</li>
+            </ul>
+          </div>
+          <div class="alert alert-success" *ngIf="message">
+            <ul>
+              <li>{{message}}</li>
+            </ul>
+          </div>
           <form method="post" class="form-horizontal" id="edituser_form"
                 (ngSubmit)="userDetailForUpdate.valid && updateUser()" #userDetailForUpdate="ngForm"
                 novalidate>

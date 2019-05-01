@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UserProfileService} from '../_services/user-profile.service';
 import {HelpersService} from '../_services/helpers.service';
-import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-user-profile',
@@ -17,8 +16,12 @@ export class UserProfileComponent implements OnInit {
     email: '',
     mobile_no: '',
     userType: '',
-    user_id: ''
+    user_id: '',
+    token : this.helpers.getLoggedInUserToken()
   };
+
+  message: string;
+  errors: [];
 
   constructor(private userProfileService: UserProfileService, private helpers: HelpersService) {
 
@@ -56,10 +59,19 @@ export class UserProfileComponent implements OnInit {
   updateUser() {
     this.userProfileService.updateUserProfile(this.userDetails).subscribe(
       res => {
-        if (res.statusCode) {
-          this.assignUserDetails((res));
-        }
+        this.handleRequestResponse(res);
       }
     );
+  }
+
+  handleRequestResponse(response) {
+    if (response.statusCode === '1') {
+      this.message = 'Profile has been successfully updated.';
+      this.assignUserDetails(response);
+      this.errors = [];
+    } else {
+      this.errors = response.errors;
+      this.message = '';
+    }
   }
 }
