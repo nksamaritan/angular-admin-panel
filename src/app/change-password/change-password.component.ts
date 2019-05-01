@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {ChangePasswordService} from '../_services/change-password.service';
+import {HelpersService} from '../_services/helpers.service';
+import {AppComponent} from '../app.component';
 
 @Component({
   selector: 'app-change-password',
@@ -17,7 +19,9 @@ export class ChangePasswordComponent implements OnInit {
     user_id: ''
   };
 
-  constructor(private changePasswordService: ChangePasswordService) {
+  constructor(private changePasswordService: ChangePasswordService,
+              private appComponent: AppComponent) {
+    this.appComponent.componentTitle = 'Change Password';
   }
 
   errors: [];

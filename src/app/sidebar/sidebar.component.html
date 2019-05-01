@@ -18,7 +18,7 @@
         </li>
       </a>
 
-      <li class=" main_menu" [routerLinkActive]="['active']">
+      <li class=" main_menu" [routerLinkActive]="['active']" (click)="setTitle('Dashboard')">
         <a routerLink="dashboard"><i class="fa fa-dashboard"
                                      style="margin-right: 10px;"></i> <span
           class="nav-label">Dashboard</span></a>
@@ -125,13 +125,13 @@
 
         </ul>
       </li>
-      <li class=" main_menu custom_sales_icon" [routerLinkActive]="['active']">
+      <li class=" main_menu custom_sales_icon" [routerLinkActive]="['active']" (click)="setTitle('User Profile')">
         <a routerLink="profile"><img
           src="http://leadapp.mobiosolutions.com/asset/admin/images/user_profile.png" style="margin-right: 14px;"/>
           <span class="nav-label">User Profile</span></a>
       </li>
 
-      <li class=" main_menu custom_sales_icon" [routerLinkActive]="['active']">
+      <li class=" main_menu custom_sales_icon" [routerLinkActive]="['active']" (click)="setTitle('Change Password')">
         <a routerLink="change-password"><img
           src="http://leadapp.mobiosolutions.com/asset/admin/images/change_password.png"
           style="margin-right: 14px;"/><span class="nav-label">Change Password</span></a>

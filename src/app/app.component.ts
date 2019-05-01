@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,20 @@ import {Router} from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'admin';
 
-  constructor(private router: Router) {
+
+  componentTitle = 'Dashboard';
+
+  constructor(private router: Router, private titleService: Title) {
   }
 
-  ngOnInit() {
+  OnInit() {
     if (localStorage.getItem('user')) {
       this.router.navigate(['/dashboard']);
+      this.titleService.setTitle('Dashboard');
     } else {
       this.router.navigate(['/login']);
+      this.titleService.setTitle('Login');
     }
   }
 

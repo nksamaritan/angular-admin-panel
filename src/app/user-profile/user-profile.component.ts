@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserProfileService} from '../_services/user-profile.service';
 import {HelpersService} from '../_services/helpers.service';
+import {AppComponent} from '../app.component';
 
 @Component({
   selector: 'app-user-profile',
@@ -17,13 +18,16 @@ export class UserProfileComponent implements OnInit {
     mobile_no: '',
     userType: '',
     user_id: '',
-    token : this.helpers.getLoggedInUserToken()
+    token: this.helpers.getLoggedInUserToken()
   };
 
   message: string;
   errors: [];
 
-  constructor(private userProfileService: UserProfileService, private helpers: HelpersService) {
+  constructor(private userProfileService: UserProfileService,
+              private helpers: HelpersService,
+              private appComponent: AppComponent) {
+    this.appComponent.componentTitle = 'User Profile';
 
   }
 

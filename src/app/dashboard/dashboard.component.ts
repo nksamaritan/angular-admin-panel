@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DashboardService} from '../_services/dashboard.service';
 import {HelpersService} from '../_services/helpers.service';
+import {AppComponent} from '../app.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,7 +17,10 @@ export class DashboardComponent implements OnInit {
     LeadConverted: '',
   };
 
-  constructor(private dashboard: DashboardService, private helpers: HelpersService) {
+  constructor(private dashboard: DashboardService,
+              private helpers: HelpersService,
+              private appComponent: AppComponent) {
+    this.appComponent.componentTitle = 'Dashboard';
   }
 
   ngOnInit() {

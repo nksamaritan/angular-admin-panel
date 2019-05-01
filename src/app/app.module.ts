@@ -18,6 +18,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {ChangePasswordComponent} from './change-password/change-password.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import {HelpersService} from './_services/helpers.service';
+import { CountryComponent } from './country/country.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {HelpersService} from './_services/helpers.service';
     FooterComponent,
     DashboardComponent,
     ChangePasswordComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    CountryComponent
   ],
   imports: [
     BrowserModule,
